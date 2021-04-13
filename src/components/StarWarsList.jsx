@@ -19,17 +19,11 @@ class StarWarsList extends Component {
     let starWarsList = this.state.characters.map((character) => {
       return (
         <Item key={character.id} className="character-item">
-          <Item.Image
-            className="avatar"
-            circular
-            size="tiny"
-            alt={character.first_name}
-            src={character.avatar}
-          />
+          
 
           <Item.Content verticalAlign="middle">
             <Item.Header className="name">
-              {character.first_name} {character.last_name}
+              {character.name}
             </Item.Header>
             <Item.Extra>
               <characterModal id={character.id} />
